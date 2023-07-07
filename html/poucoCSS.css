@@ -1,0 +1,19 @@
+h1 {
+    font-size: 20px;
+}
+
+.redBG {
+    background-color: darkred;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#txtP {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: darkgray;
+    color: white;
+    margin-bottom: 50px;
+}

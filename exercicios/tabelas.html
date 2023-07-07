@@ -1,0 +1,61 @@
+<!-- 
+    Caption - 
+    Thead - 
+
+ -->
+<table>
+    <caption>Produtos</caption>
+    <thead> <!-- Cabeçalho Table -->
+        <tr> <!-- Table Row -->
+            <th>Produto</th> <!-- Table Head / Colunas -->
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody> <!-- Cabeçalho Corpo -->
+        <tr> <!-- Table Row -->
+            <td>iPad</td> <!-- Table Data -->
+            <td>R$3500,00</td>
+            <td>5</td>
+            <td>R$17000,00</td>
+        </tr>
+        <tr>
+            <td>Samsung S9</td>
+            <td>R$2500,00</td>
+            <td>4</td>
+            <td>R$10000,00</td>
+        </tr>
+    </tbody>
+    <tfoot> <!-- Table foot -->
+        <tr>
+            <td colspan="3">TOTAL</td> <!-- Colspan/Rowspan - Quantidade de colunas/linhas que o dado vai utilizar -->
+            <td>R$27000,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;
+    }
+
+    th,td{
+        padding: 10px;
+
+    }
+
+    thead tr{
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover{
+        background-color: #DEDEDE;
+    }
+
+    tfoot{
+        background-color: #444;
+        color: #FFF;
+        font-weight: bold;
+    }
+</style>

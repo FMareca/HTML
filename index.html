@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios HTML</title>
+    <style>
+        #conteudo{
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercicios HTML</h1>
+    </header>
+    <nav>
+        <a href wm-nav="exercicios/teste.html">000 - Teste</a> /
+        <a href wm-nav="exercicios/texto01.html">001 - TEXTO 001</a> / 
+        <a href wm-nav="exercicios/texto02.html">002 - TEXTO 002</a> / 
+        <a href wm-nav="exercicios/listas.html">003 - LISTAS 001</a> /
+        <a href wm-nav="exercicios/listasAninhadas.html">004 - LISTAS 002</a> /
+        <a href wm-nav="exercicios/links.html">005 - LINKS 001</a> /
+        <a href wm-nav="exercicios/tabelas.html">006 - TABELAS 001</a> /
+        <a href wm-nav="exercicios/form/form.html">007 - FORMULÁRIO 001</a> /
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Curso de WebModerno
+    </footer>
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link =>{
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e) {
+                e.preventDefault()                
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>
